@@ -1,0 +1,40 @@
+a)
+Invoke-RestMethod `
+-Uri http://127.0.0.1:5000/criar_csv `
+-Method POST `
+-Body '[{"nome": "Ana", "rating": "4.5", "duracao": "120", "ano": "2020", "genero": "Documentario"},
+{"nome": "Bia", "rating": "4.0", "duracao": "90", "ano": "2010", "genero": "Terror"},
+{"nome": "Julia", "rating": "4.8", "duracao": "150", "ano": "2013", "genero": "Ficcao"},
+{"nome": "Carla", "rating": "4.2", "duracao": "110", "ano": "2020", "genero": "Comedia"},
+{"nome": "Carol", "rating":"4.6", "duracao":"130", "ano":"2019", "genero":"Acao"},
+{"nome":"Camila", "rating":"4.1", "duracao":"100","ano":"2021","genero":"Drama"},
+{"nome": "Maria", "rating": "4.9", "duracao": "140", "ano": "2015", "genero": "Romance"},
+{"nome": "Rebeca", "rating": "4.3", "duracao": "95", "ano": "2019", "genero": "Acao"},
+{"nome": "Nathalia", "rating": "4.7", "duracao": "125", "ano": "2012", "genero": "Drama"},
+{"nome": "Fernanda", "rating": "4.4", "duracao": "135", "ano": "2020", "genero": "Romance"},
+{"nome": "Joao", "rating": "4.0", "duracao":"110", "ano":"2012", "genero":"Comedia"},
+{"nome": "Pedro", "rating": "3.8", "duracao": "95", "ano": "2021", "genero": "Acao"},
+{"nome": "Lucas", "rating": "4.2", "duracao": "140", "ano": "2020", "genero": "Drama"},
+{"nome": "Rafael", "rating": "4.5", "duracao": "120", "ano": "2019", "genero": "Documentario"},
+{"nome": "Gustavo", "rating": "4.1", "duracao": "100", "ano": "2021", "genero": "Terror"},
+{"nome": "Felipe", "rating": "4.3","duracao":"130","ano":"2020","genero":"Suspense"},
+{"nome": "Bruno", "rating": "4.6", "duracao": "150", "ano": "2017", "genero": "Comedia"},
+{"nome": "Ricardo", "rating": "4.0", "duracao": "90", "ano": "2021", "genero": "Acao"},
+{"nome": "Thiago", "rating": "4.2", "duracao": "125", "ano": "2020", "genero": "Drama"},
+{"nome": "Andre", "rating": "4.4","duracao":"135","ano":"2019","genero":"Comedia"}]' `
+-ContentType "application/json"
+
+b)
+Invoke-RestMethod `
+-Uri http://127.0.0.1:5000/editar_csv `
+-Method POST `
+-Body '{"nome":"Paulo","rating":"4.3","duracao":"120","ano":"2022","genero":"Drama"}' `
+-ContentType "application/json"
+
+c) 
+http://127.0.0.1:5000/ler_csv?n=2&m=5
+
+d) ERRO
+http://127.0.0.1:5000/filtrar_csv?var=rating&x=4.5
+
+e) iwr "http://127.0.0.1:5000/excluir_genero?y=Acao" -Method DELETE
