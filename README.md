@@ -23,7 +23,7 @@ Também foram criados scripts de teste utilizando a biblioteca requests para ace
 
 Instale as bibliotecas
 
-`pip install flask`
+`pip install flask`<br>
 `pip install requests`
 
 
@@ -44,10 +44,8 @@ http://127.0.0.1:5000
 GET: 
 http://127.0.0.1:5000
 
-Resposta esperada:
-
+Resposta esperada:<br>
 API funcionando
-
 
 # Scripts de teste
 
@@ -59,7 +57,7 @@ Arquivo responsável por enviar uma requisição POST para o endereço `/criar_c
 
 Execute em um terminal diferente daquele onde a API foi iniciada na etapa anterior.
 
-Resposta esperada: 
+Resposta esperada: <br>
 "CSV criado"
 
 Verifique se na pasta existe um arquivo "dados.csv" com o conteudo executado no terminal.
@@ -68,7 +66,7 @@ Verifique se na pasta existe um arquivo "dados.csv" com o conteudo executado no 
 
 Realiza uma requisição POST para `/editar_csv` e adiciona uma nova linha ao arquivo.
 
-Resposta esperada: 
+Resposta esperada: <br>
 "Edição feita ao CSV"
  
 Verifique se no arquivo "dados.csv" existe a nova linha adicionada.
@@ -79,7 +77,7 @@ Envia uma requisição GET para `/ler_csv` exibindo as as linhas [n,m] do arquiv
 
 Cole o link informado no navegador e especifique nas variáveis n e m as linhas que deseja exibir.
 
-Resposta esperada:  (exemplo n=1, m=3)
+Resposta esperada:  (exemplo n=1, m=3)<br>
 [{"nome":"Bia","rating":4.0,"duracao":90,"ano":2010,"genero":"Terror"},{"nome":"Julia","rating":4.8,"duracao":150,"ano":2013,"genero":"Ficcao"},{"nome":"Carla","rating":4.2,"duracao":110,"ano":2020,"genero":"Comedia"}]
 
 ## Teste D – Filtrar linhas arquivo .csv
@@ -88,7 +86,7 @@ Envia uma requisição GET para `/filtrar_csv` e filtra linhas do arquivo em que
 
 Cole o link informado no navegador e especifique as variáveis "var" e "x".
 
-Resposta esperada: (var=rating&x=4.1)
+Resposta esperada: (var=rating&x=4.1)<br>
 [{"nome":"Bia","rating":4.0,"duracao":90,"ano":2010,"genero":"Terror"},{"nome":"Joao","rating":4.0,"duracao":110,"ano":2012,"genero":"Comedia"},{"nome":"Pedro","rating":3.8,"duracao":95,"ano":2021,"genero":"Acao"},{"nome":"Ricardo","rating":4.0,"duracao":90,"ano":2021,"genero":"Acao"}]
 
 ## Teste E – Exclui linhas arquivo .csv
@@ -97,7 +95,7 @@ Envia uma requisição DELETE para `/excluir_genero` e exclui linhas do arquivo 
 
 Cole o link informado no navegador e especifique a variável "y".
 
-Resposta esperada: (y=Acao)
+Resposta esperada: (y=Acao)<br>
 {
 "mensagem": "Filmes do genero Acao removidos"
 }
