@@ -35,6 +35,6 @@ c)
 http://127.0.0.1:5000/ler_csv?n=2&m=5
 
 d) 
-http://127.0.0.1:5000/filtro_csv?var=rating&x=4.5
+http://127.0.0.1:5000/filtrar_csv?var=rating&x=4.5
 
 e) iwr "http://127.0.0.1:5000/excluir_genero?y=Acao" -Method DELETE
