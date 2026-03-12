@@ -15,7 +15,7 @@ def criar_csv():
 
     dados = request.json
 
-    df = pd.DataFrame([dados])
+    df = pd.DataFrame(dados)
 
     df.to_csv("dados.csv", index=False)
 
