@@ -52,8 +52,8 @@ def ler_csv():
 
 # d) Requisição para retornar valores filtrados com valores menores que x (enviar nome da coluna numérica que será realizado filtro);
 
-@app.route('/filtro_csv', methods=['GET'])
-def filtro_csv():
+@app.route('/filtrar_csv', methods=['GET'])
+def filtrar_csv():
 
     var = request.args.get('var')
     x = float(request.args.get('x'))
