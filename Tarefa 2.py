@@ -46,7 +46,7 @@ def ler_csv():
 
     df = pd.read_csv("dados.csv")
 
-    resultado = df.iloc[n:m]
+    resultado = df.iloc[n:m+1]
 
     return resultado.to_json(orient="records")
 
